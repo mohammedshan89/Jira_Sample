@@ -4,32 +4,32 @@ export const data = {
     {
       id: 2500,
       category: "pending",
-      task: "Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+      task: " Pending Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
     },
     {
       id: 2501,
       category: "ongoing",
-      task: "Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
+      task: " Ongoing Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
     },
     {
       id: 2502,
       category: "pending",
-      task: "Omnis, eum aliquam labore ratione maxime voluptatem.",
+      task: " Pending Omnis, eum aliquam labore ratione maxime voluptatem.",
     },
     {
       id: 2503,
       category: "completed",
-      task: "Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+      task: " Completed Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
     },
     {
       id: 2504,
       category: "completed",
-      task: "Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
+      task: " Completed Adeleniti beatae commodi, quo consequun liquidisicing el minima.",
     },
     {
       id: 2505,
       category: "ongoing",
-      task: "Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
+      task: " ongoing Lorem ipsum dolor sit amet consectetur adipisicing el minima.",
     },
   ],
 };

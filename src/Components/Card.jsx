@@ -15,14 +15,15 @@ const Card = ({ item }) => {
           item.id === id ? (item.category = "completed") : item
         ))
       : status === "completed"
-      ? console.log(updatedData = state.filter((item) => item.id !== id )):''; 
-    setState((prev) => console.log(prev));
+      ? (updatedData = state.filter((item) => item.id !== id )):''; 
+    setState(()=>updatedData);
+    
   };
 
   return (
     <div>
       <di className="taskItems">
-        <div className="taskItem">
+        <div className="taskItem">    
           <p>{item.task}</p>
           <button
             onClick={() => handleUpdate(item.category, item.id)}

@@ -16,13 +16,14 @@ const Card = ({ item }) => {
         ))
       : status === "completed"
       ? (updatedData = state.filter((item) => item.id !== id )):''; 
-    setState(()=>updatedData);
+    
+      setState(()=>updatedData);
     
   };
 
   return (
     <div>
-      <di className="taskItems">
+      <div className="taskItems">
         <div className="taskItem">    
           <p>{item.task}</p>
           <button
@@ -36,7 +37,7 @@ const Card = ({ item }) => {
             {item.category === "completed" ? "Delete" : "Move"}
           </button>
         </div>
-      </di>
+      </div>
     </div>
   );
 };

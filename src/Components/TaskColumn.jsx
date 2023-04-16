@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Card from "./Card";
 import { DataItemsContext } from "../App";
+import Card1 from "./Card1";
 
 const TaskColumn = ({ status }) => {
-  const {state} = useContext(DataItemsContext);
-  
+  const {state,setState} = useContext(DataItemsContext);
   return (
     <div className="taskColumn">
       <div className="columnHeader">

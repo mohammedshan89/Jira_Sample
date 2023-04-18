@@ -15,29 +15,25 @@ const Card = ({ item }) => {
           item.id === id ? (item.category = "completed") : item
         ))
       : status === "completed"
-      ? (updatedData = state.filter((item) => item.id !== id )):''; 
-    
-      setState(()=>updatedData);
-    
+      ? (updatedData = state.filter((item) => item.id !== id))
+      : "";
+    console.log(state);
+    // setState(()=>updatedData);
   };
 
   return (
-    <div>
-      <div className="taskItems">
-        <div className="taskItem">    
-          <p>{item.task}</p>
-          <button
-            onClick={() => handleUpdate(item.category, item.id)}
-            className={
-              item.category === "completed"
-                ? "taskButton delete"
-                : "taskButton move"
-            }
-          >
-            {item.category === "completed" ? "Delete" : "Move"}
-          </button>
-        </div>
-      </div>
+    <div className="taskItem">
+      <p>{item.task}</p>
+      <button
+        onClick={() => handleUpdate(item.category, item.id)}
+        className={
+          item.category === "completed"
+            ? "taskButton delete"
+            : "taskButton move"
+        }
+      >
+        {item.category === "completed" ? "Delete" : "Move"}
+      </button>
     </div>
   );
 };

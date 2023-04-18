@@ -5,20 +5,23 @@ const Card = ({ item }) => {
   const { state, setState } = useContext(DataItemsContext);
 
   const handleUpdate = (status, id) => {
-    let updatedData;
     status === "pending"
-      ? (updatedData = state.filter((item) =>
-          item.id === id ? (item.category = "ongoing") : item
-        ))
+      ? setState((prev) =>
+          prev.map((item) =>
+            item.id === id ? { ...item, category: "ongoing" } : item
+          )
+        )
       : status === "ongoing"
-      ? (updatedData = state.filter((item) =>
-          item.id === id ? (item.category = "completed") : item
-        ))
+      ? setState((prev) =>
+          prev.map((item) =>
+            item.id === id ? { ...item, category: "completed" } : item
+          )
+        )
       : status === "completed"
-      ? (updatedData = state.filter((item) => item.id !== id))
-      : "";
-    console.log(state);
-    // setState(()=>updatedData);
+      ? setState((prev) => {
+          return prev.filter((item) => item.id !== id);
+        })
+      : null;
   };
 
   return (

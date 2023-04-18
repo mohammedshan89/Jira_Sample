@@ -11,7 +11,7 @@ const Card1 = ({ item }) => {
             item.id === id ? [...item, (category = "ongoing")] : item
           )
         )
-      : "F";
+      : "";
   };
 
   return (
